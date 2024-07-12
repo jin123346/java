@@ -21,7 +21,7 @@ class Adder{
 	
 	public void add(int x,int y) {
 		this.x+=x;
-		y++;
+		y++;      //this.y=0  , 변수 y = 3 
 	}
 	
 	public void add(int[] arr) {
@@ -32,12 +32,12 @@ class Adder{
 		a2.x +=10;
 	}
 	public static Adder add(Adder a3,int value) {
-		return new Adder(value);
+		return new Adder(value);   // 새로운 객체 생성됨 
 		
 	}
 	public void show() {
-		System.out.println("x : "+x);
-		System.out.println("y : "+y);
+		System.out.println("x : "+this.x);
+		System.out.println("y : "+this.y);
 	}
 	
 }
@@ -46,19 +46,19 @@ public class Test06 {
 	public static void main(String[] args) {
 		Adder a1 = Adder.getInstance();
 		
-		a1.add(1,2);
+		a1.add(1,2);         //method area에 x=1 , y=3
+		a1.show(); 				//x:1 y:0
+		
+		int[] arr= {10,20};   //heap 10 20 
+		a1.add(arr);		// x :11 y:20
+		
+		a1.show();			
+		
+		Adder.add(a1);     //x : 21 y : 20
 		a1.show();
 		
-		int[] arr= {10,20};
-		a1.add(arr);
-		
-		a1.show();
-		
-		Adder.add(a1);
-		a1.show();
-		
-		a1= Adder.add(a1, 3);
-		a1.show();
+		a1= Adder.add(a1, 3);  // Adder(3) => 새 인스턴스니까 x:0 y:0인 상태에서 this.y+=3이됨 
+		a1.show();		//x:0,y:3
 		
 		
 	}
