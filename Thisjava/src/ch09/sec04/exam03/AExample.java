@@ -5,8 +5,7 @@ public class AExample {
 		//A객체 생성
 		A a= new A();
 		
-		a.useB();
-
+		a.method1(4);
 		
 	}
 	
