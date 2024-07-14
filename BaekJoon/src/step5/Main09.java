@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /*
- * #날짜 : 2024/07/10
+ * #날짜 : 2024/07/13
  * #백준 : 2098번 상수
  */
 public class Main09 {

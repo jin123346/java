@@ -3,7 +3,7 @@ package step5;
 import java.util.Scanner;
 
 /*
- * #날짜 : 2024/07/10
+ * #날짜 : 2024/07/14
  * #백준 : 5622번 다이얼
  */
 public class Main10 {
@@ -40,7 +40,7 @@ public class Main10 {
 			for(int i=2; i< dial.length;i++) {
 				for(int j=0;j<dial[i].length;j++) {
 						if(dial[i][j].charAt(0)==c) {
-							result[i]=i+1;
+							result[i]+=(i+1);
 						}
 				}
 			}

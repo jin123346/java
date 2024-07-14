@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 
 /*
- * #날짜 : 2024/07/10
+ * #날짜 : 2024/07/13
  * #백준 : 1152번 단어의 개수
  */
 public class Main08 {

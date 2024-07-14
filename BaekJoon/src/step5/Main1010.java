@@ -3,7 +3,7 @@ package step5;
 import java.util.Scanner;
 
 /*
- * #날짜 : 2024/07/10
+ * #날짜 : 2024/07/13
  * #백준 : 5622번 다이얼
  */
 public class Main1010 {
