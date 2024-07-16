@@ -22,6 +22,7 @@ public class Main09 {
 		
 		for(int i=0;i<A.length;i++) {
 				A[i]=a.charAt(i)-'0';
+				System.out.println(A[i]);
 		}
 		for(int i=0;i<B.length;i++) {
 				B[i]=b.charAt(i)-'0';

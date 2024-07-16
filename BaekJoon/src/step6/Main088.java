@@ -10,7 +10,7 @@ import java.util.Set;
  * #날짜 : 2024/07/
  * #백준 : 1316번 그룹 단어 체커
  */
-public class Main08 {
+public class Main088 {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
@@ -21,25 +21,10 @@ public class Main08 {
 		
 		for(int i=0;i<n;i++) {
 			String word =br.readLine();
-			Set<Character> seen = new HashSet<>();
-			boolean isGroupword = true;
-			char prev = '\0';
-			
-			for(int j=0;j<word.length();j++) {
-				char current = word.charAt(j);
-				if(current != prev) {
-					if(seen.contains(current)) {
-						isGroupword = false;
-						break;
-					}
-					seen.add(current);
-				}
-				prev=current;
-			}
-			
-			if(isGroupword) {
+			if(isGroupWord(word)) {
 				count++;
 			}
+			
 		}
 		System.out.println(count);
 		
@@ -47,5 +32,24 @@ public class Main08 {
 		
 	}
 	
+	private static boolean isGroupWord(String word) {
+		Set<Character> seen = new HashSet<Character>();
+		char prev = '\0';
+		
+		for(int i=0;i<word.length();i++) {
+			char current = word.charAt(i);
+			if(current != prev) {
+				if(seen.contains(current)) {
+					return false;
+				}
+				seen.add(current);
+			}
+			prev=current;
+		}
+		
+		
+		return true;
+	}
 	
+
 }

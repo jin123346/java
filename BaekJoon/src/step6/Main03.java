@@ -27,6 +27,28 @@ public class Main03 {
 			System.out.print("\n");
 		}
 		
+		System.out.println();
+		
+		int count2=0;
+		int n=5;
+
+		for(int i=0;i<2*n-1;i++){
+			if(i<n){
+				count2++;
+				}else{
+					count2--;
+				}
+				
+				for(int j=0;j<n-count2;j++){
+						System.out.print("_");
+				}
+				for(int k=0;k<2*count2-1;k++){
+					System.out.print("*");
+				}
+				
+				System.out.print("\n");
+		}
+		
 		
 		sc.close();
 		
