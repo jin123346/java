@@ -13,18 +13,25 @@ public class Main3 {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
 		
-		String[][] str = new String[5][5];
+		String[][] str = new String[5][];
+		int maxLength=0;
 		
 		for(int i=0;i<5;i++) {
 			str[i] = br.readLine().split("");
+			if(str[i].length > maxLength) {
+				maxLength= str[i].length;
+			}
 		}
 		
 		ArrayList<String> result = new ArrayList<>();
 		
-		for(int i=0;i<5;i++) {
+		for(int i=0;i<maxLength;i++) {
 			for(int j=0;j<5;j++) {
+				if(i<str[j].length) {
 				result.add(str[j][i]);
+				}
 			}
+				
 		}
 		
 		for(String a : result) {
