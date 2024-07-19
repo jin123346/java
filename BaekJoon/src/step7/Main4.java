@@ -15,26 +15,35 @@ public class Main4 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		Boolean[][] squre  = new Boolean[100][100];
+		int[][] squre  = new int[100][100];
 	
-		Arrays.fill(squre,false);
 		
-		int n = Integer.parseInt(br.readLine());
+		
+		int n = Integer.parseInt(st.nextToken());
 		int a = 0,b=0;
+		int sum=0;
 		for(int i=0;i<n;i++) {
 			st = new StringTokenizer(br.readLine());
 			a = Integer.parseInt(st.nextToken());
 			b = Integer.parseInt(st.nextToken());
 			for(int x=a;x<a+10;x++) {
 				for(int y=b;y<b+10;y++) {
-					if(squre[x][y]!=false) {
-					squre[x][y]=false;
-					}else{
-					squre[x][y] = null;
-					}
+					squre[x][y]++;
+
 				}
 			}
 		}
+	
+			for(int x=0;x<100;x++) {
+				for(int y=0;y<100;y++) {
+					if(squre[x][y]!=0) {
+						sum++;
+					}
+				}
+			}
+			
+			System.out.println(sum);
+		
 	}
 
 }
