@@ -21,7 +21,7 @@ public class Main22 {
 		int N = Integer.parseInt(st.nextToken());
 		int B = Integer.parseInt(st.nextToken());
 		
-			
+				
 	
 		String ans = "";
 		while(N>0) {
