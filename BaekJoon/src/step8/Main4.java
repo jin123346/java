@@ -14,7 +14,19 @@ public class Main4 {
 		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int n = Integer.parseInt(st.nextToken());
+		int result=2;
 		
+		if(n==0) {
+			result=4;
+		}else {
+			double temp=1;
+			for(int i=0;i<n ;i++) {
+				temp *= 2;
+				}
+			temp +=1;
+			result=(int)temp*(int)temp;
+		}
+		System.out.println(result);
 	}
 
 }
