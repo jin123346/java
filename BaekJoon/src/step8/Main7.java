@@ -9,28 +9,31 @@ import java.util.StringTokenizer;
 
 /*
  * #날짜 : 2024/07/19
- * #백준 : 1193번 분수찾기
+ * #백준 : 2869번 올라가고 싶다.
  */
-public class Main66 {
+public class Main7 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int num = Integer.parseInt(st.nextToken());
+		int A = Integer.parseInt(st.nextToken());
+		int B = Integer.parseInt(st.nextToken());
+		int V = Integer.parseInt(st.nextToken());
+	
 		
-		int  room=1;
-		int range=0;
-		int step=1;
+		int result=0;
+		int m = A-B;
 		
-		while(num > range) {
-			range += step;
-			step++;
-			room++;
+		result = (V-B)/m;
+		
+		if((V-B)%m != 0) {
+			result ++;
 		}
 		
-		System.out.println(range);
-		System.out.println(room);
+		System.out.println(result);
 		
+		
+	
 	
 	
 	}
