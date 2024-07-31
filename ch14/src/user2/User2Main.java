@@ -1,10 +1,7 @@
 package user2;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import user1.User1VO;
 
 public class User2Main {
 	public static void main(String[] args) {
