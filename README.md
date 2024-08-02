@@ -1,6 +1,4 @@
- ### Hi there ❣
-
-# Java Study
+# Java 
 > java 실습 원격 저장소
 
 ### ch1. java&Eclipse 개요
